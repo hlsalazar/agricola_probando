@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "664466920499",
+    "project_id": "prowes-app-agricola",
+    "storage_bucket": "prowes-app-agricola.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:664466920499:android:0c5a11a0144267c9243f46",
+        "android_client_info": {
+          "package_name": "com.example.prowes_motorizado"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "664466920499-05o3dugo7grtc1pdnfheuijascirve8k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAomBw7DB8MMjK8NsMQrcvN71wQgCwUNAo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "664466920499-05o3dugo7grtc1pdnfheuijascirve8k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
