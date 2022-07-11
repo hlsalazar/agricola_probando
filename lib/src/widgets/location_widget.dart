@@ -6,7 +6,9 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:prowes_motorizado/src/services/pedidos_service.dart';
 
 late double distance;
+// ignore: unused_element
 late Marker _origin;
+// ignore: unused_element
 late Marker _destination;
 
 class LocationWidget extends StatefulWidget {
@@ -139,6 +141,7 @@ class _LocationWidgetState extends State<LocationWidget> {
   }
 
   _obtenerPosicion() async {
+    // ignore: unused_local_variable
     Map<String, dynamic>? _resp =
         await _pedidoService.getAddress(widget.idPedido);
     _position = await _determinarPosicion();

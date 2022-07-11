@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:geolocator/geolocator.dart';
@@ -18,13 +19,14 @@ class PageLocation extends StatefulWidget {
 class _PageLocationState extends State<PageLocation> {
   final Completer<GoogleMapController> _controller = Completer();
   final List<Marker> _markers = [];
-  Set<Polyline> _polyline = {};
+  final Set<Polyline> _polyline = {};
 
   List<LatLng> latLines = [];
 
   String? phoneCom, phoneVen, nameCom, nameVen;
 
   Position? _position;
+  // ignore: non_constant_identifier_names
   late CameraPosition _Latacunga = const CameraPosition(
     target: LatLng(-0.9324760840048609, -78.61793541360251),
     zoom: 14,
@@ -210,7 +212,7 @@ class _PageLocationState extends State<PageLocation> {
 
   _obtenerlinea() async {
     _polyline.add(Polyline(
-      polylineId: PolylineId('route'),
+      polylineId: const PolylineId('route'),
       points: latLines,
       color: Colors.orange,
       width: 6,
@@ -235,5 +237,12 @@ class _PageLocationState extends State<PageLocation> {
         ],
       ),
     );
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+        .add(DiagnosticsProperty<CameraPosition>('_Latacunga', _Latacunga));
   }
 }
